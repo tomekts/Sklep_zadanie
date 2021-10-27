@@ -1,0 +1,23 @@
+[
+   {
+      "id":1,
+      "name":"Produkt X",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed   do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "img":"product-x.jpg",
+      "price":2001.99
+   },
+   {
+      "id":2,
+      "name":"Produkt Y",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed   do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "img":"product-y.jpg",
+      "price":1014.39
+   },
+   {
+      "id":3,
+      "name":"Produkt Z",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed   do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "img":"product-z.jpg",
+      "price":1541.29
+   }
+]

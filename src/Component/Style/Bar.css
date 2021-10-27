@@ -1,0 +1,38 @@
+.bar{
+    height: 40px;    
+    background-color: black;     
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.icon{
+    color: white;
+    margin: auto 5px;    
+    text-decoration: none;
+}
+.icon:hover{
+    color: rgb(182, 182, 182);
+       
+}
+
+.cart{
+    margin: auto 20px;
+    display: flex;
+    padding: 3px;
+    color: white;
+    text-align: center;
+    background-color: #3b93f77a;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: ease 1s;
+
+    
+}
+.cart:hover{
+    background-color: #3b93f7;
+    transition: ease 1s;
+    cursor: pointer;
+    
+}
+
