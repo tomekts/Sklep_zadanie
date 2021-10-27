@@ -17,14 +17,13 @@ function Cart() {
             localStorage.getItem('Cart')?     
             setCart(JSON.parse(localStorage.getItem('Cart')))  
             :
-            console.log("Brak danych w przegladarce")             
+             <></>            
         }       
     },[]) 
 
     // zmiana ilosci przy danym produkcie w koszyku
     const  editCount = (e, id) =>{
-        e.preventDefault();
-        console.log(e.target.count.value)
+        e.preventDefault();        
         let cartToEdit = Cart
         let index=Cart.findIndex(el => el.idItem===id)     
         cartToEdit[index].count=e.target.count.value    
@@ -119,7 +118,7 @@ function Cart() {
                                     Cena produktu za sztuke: {Date.find(el => el.id===prod.idItem).price} zł
                                 </div>                                
                                 <form onSubmit={(e) =>editCount(e, prod.idItem)}>
-                                    ilosc:<input min='1' max='100' id='count' type='number' defaultValue={prod.count} className={'countInProduct'}></input>
+                                    Ilosc:<input min='1' max='100' id='count' type='number' defaultValue={prod.count} className={'countInProduct'}></input>
                                     <button>Zmień ilość</button>                                
                                 </form>
                                 <form onSubmit={(e) =>deleteProduct(e, prod.idItem)}>
@@ -129,17 +128,19 @@ function Cart() {
                         </div>
                     ))}
                     <div className='order'>
-                        Cena całego zamówienia {Price} zł
+                        <div>
+                            Cena całego zamówienia {Price} zł
+                        </div>
                         <div>
                             <form onSubmit={(e) =>checkCode(e)}>   
-                                kod rabatowy<input id='code' maxLength="8" minLength="2"></input>                 
-                                <button type='submit'>sprawdz kod</button>
+                                Kod rabatowy<input id='code' maxLength="8" minLength="2"></input>                 
+                                <button type='submit'>Sprawdz kod</button>
                                 <button type='button' onClick={()=> removeVoucher()} className={Voucher===true? 'buttonRemoveCode show': 'noShow'}>Usuń kod </button>
                             </form>
                         </div>
                         <div>
                             Wpisz email <input></input>
-                            <button>złoż zamówienie</button>
+                            <button>Złoż zamówienie</button>
                         </div>
                     </div>  
                 </div>                    

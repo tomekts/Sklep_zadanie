@@ -34,8 +34,7 @@ const addToCart =  (id) =>{
     let cartData = Cart     
     if(cartData===null){    //sprawdzenie czy są dane w przegladarce    
         cartData = [{idItem:id, count:1}]
-        setCart(cartData)
-        console.log('pierwsze dodanie')          
+        setCart(cartData)                
         localStorage.setItem('Cart', JSON.stringify(cartData)) 
         Notification('success', 'Dodano do koszyka')         
     }else{
