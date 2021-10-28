@@ -11,7 +11,7 @@ function bar() {
             <NavLink to='/' className='icon'> 
                       
                 <FontAwesomeIcon icon={faStore} style={{color: 'white',height:'25px' }} ></FontAwesomeIcon>
-                <span>Sklep.pl</span>    
+                <span>Sklep</span>    
             </NavLink>  
 
             <NavLink exact to='/cart' className='cart'>                      
