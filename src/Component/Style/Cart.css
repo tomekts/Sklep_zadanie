@@ -61,15 +61,27 @@
     text-align: left;
     display: block;        
     border-radius: 10px;
-    margin: 1px 0 10% 30% ;
+    margin: 1px 0 2% 30% ;
     transition: ease 1s;    
 }
 .order div{
     padding-left: 5px;
 }
+.emailField{
+    border: none;    
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    margin: 5px;
+}
+.codeField{
+    border: none;    
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    margin: 5px;
+}
 
 
-@media screen and (max-width:760px) {
+@media screen and (max-width:825px) {
     .productInCart{
         width: 95%;  
         transition: ease 1s;        
@@ -80,4 +92,13 @@
         transition: ease 1s;
     }
 
+}
+
+@media screen and (min-width:1250px) {
+    
+    .order{        
+        width: 40%;
+        margin: 1px 0 3% 50% ;
+        transition: ease 1s;
+    }
 }

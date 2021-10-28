@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect  } from 'react'
 import '../Style/Cart.css'
 import db from '../../products.json'
 import ReactNotification from 'react-notifications-component'
 import { store } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css'
+import emailjs from 'emailjs-com';
 
 function Cart() {  
     const [Cart, setCart] = useState([])  
     const [Date,] = useState(db)//pobieranie danych z pliku  
     const [Price, setPrice] = useState([])
     const [Voucher, setVoucher] = useState(false)
+   
 
     useEffect((Cart)=>{  
         
@@ -94,6 +96,33 @@ function Cart() {
             }
         });
     }    
+
+  
+
+    const GenerateOrder = () => {
+        let message=''
+        Cart.map((item) =>(
+            message+=Date.find(el => el.id===item.idItem).name+' ilość: '+item.count+' '          
+        ))
+        return message
+    }
+
+    const EmailSend = (e) =>{
+        e.preventDefault();
+        let dataForSend={
+            price:Price,
+            order:GenerateOrder()
+        }        
+            
+        emailjs.send(process.env.REACT_APP_SERVICE, 'template_0v2ityj',  dataForSend,process.env.REACT_APP_USER)
+        .then((result) => {
+          console.log(result.text);
+          Notification('success', 'Zamówienie złozone, wysłano email',2000)
+        }, (error) => {
+          console.log(error.text);
+          Notification('danger', 'Błąd zamówienia',2000)
+        });
+    }
     //sprwadzenie wystepowanie prawidłowego kodu i zablokowanie automatycznej zmieny ceny
     Voucher===false?
     setTimeout(()=>sumOrder(),10)
@@ -133,14 +162,16 @@ function Cart() {
                         </div>
                         <div>
                             <form onSubmit={(e) =>checkCode(e)}>   
-                                Kod rabatowy<input id='code' maxLength="8" minLength="2"></input>                 
+                                Kod rabatowy<input className={'codeField'} id='code' maxLength="8" minLength="2"></input>                 
                                 <button type='submit'>Sprawdz kod</button>
                                 <button type='button' onClick={()=> removeVoucher()} className={Voucher===true? 'buttonRemoveCode show': 'noShow'}>Usuń kod </button>
                             </form>
                         </div>
                         <div>
-                            Wpisz email <input></input>
-                            <button>Złoż zamówienie</button>
+                            <form onSubmit={(e) =>EmailSend(e)}>   
+                                Wpisz email <input className={'emailField'} type='email' name='email'></input>    
+                                <button>Złoż zamówienie</button>    
+                            </form>
                         </div>
                     </div>  
                 </div>                    
