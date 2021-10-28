@@ -89,6 +89,7 @@
     .order{
         width: 95%;
         margin: 0 auto;
+        margin-bottom: 250px;
         transition: ease 1s;
     }
 
@@ -98,7 +99,7 @@
     
     .order{        
         width: 40%;
-        margin: 1px 0 3% 50% ;
+        margin: 1px 0 40% 50% ;
         transition: ease 1s;
     }
 }
