@@ -111,10 +111,10 @@ function Cart() {
         e.preventDefault();
         let dataForSend={
             price:Price,
-            order:GenerateOrder()
-        }        
-            
-        emailjs.send(process.env.REACT_APP_SERVICE, 'template_0v2ityj',  dataForSend,process.env.REACT_APP_USER)
+            order:GenerateOrder(),
+            email:e.target.email.value
+        }       
+        emailjs.send(process.env.REACT_APP_SERVICE, 'template_0v2ityj',  dataForSend, process.env.REACT_APP_USER)
         .then((result) => {
           console.log(result.text);
           Notification('success', 'Zamówienie złozone, wysłano email',2000)
@@ -169,7 +169,7 @@ function Cart() {
                         </div>
                         <div>
                             <form onSubmit={(e) =>EmailSend(e)}>   
-                                Wpisz email <input className={'emailField'} type='email' name='email'></input>    
+                                Wpisz email <input className={'emailField'} type='email' name='email' required></input>    
                                 <button>Złoż zamówienie</button>    
                             </form>
                         </div>
