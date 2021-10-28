@@ -61,7 +61,7 @@
     text-align: left;
     display: block;        
     border-radius: 10px;
-    margin: 1px 0 40% 30% ;
+    margin: 1px 0 250px 30% ;
     transition: ease 1s;    
 }
 .order div{
@@ -99,7 +99,7 @@
     
     .order{        
         width: 40%;
-        margin: 1px 0 40% 50% ;
+        margin: 1px 0 250px 50% ;
         transition: ease 1s;
     }
 }
