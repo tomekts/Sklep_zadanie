@@ -162,14 +162,14 @@ function Cart() {
                         </div>
                         <div>
                             <form onSubmit={(e) =>checkCode(e)}>   
-                                Kod rabatowy<input className={'codeField'} id='code' maxLength="8" minLength="2"></input>                 
+                                Kod rabatowy:<input className={'codeField'} id='code' maxLength="8" minLength="2"></input>                 
                                 <button type='submit'>Sprawdz kod</button>
                                 <button type='button' onClick={()=> removeVoucher()} className={Voucher===true? 'buttonRemoveCode show': 'noShow'}>Usuń kod </button>
                             </form>
                         </div>
                         <div>
                             <form onSubmit={(e) =>EmailSend(e)}>   
-                                Wpisz email <input className={'emailField'} type='email' name='email' required></input>    
+                                Wpisz email: <input className={'emailField'} type='email' name='email' required></input>    
                                 <button>Złoż zamówienie</button>    
                             </form>
                         </div>

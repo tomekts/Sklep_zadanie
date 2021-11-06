@@ -32,11 +32,9 @@
     float: left;
     padding-right: 2%;
     transition: 1s ease;
-    }   
+    }  
     
-.info{    
 
-}
 .name{
     font-size: 20px;
     transition: 1s ease;
@@ -51,7 +49,9 @@
 button{
     background-color: #3b93f7;    
     border: none;
-    border-radius: 20px;
+    margin: 2px 0px;
+    padding: 4px 10px;
+    border-radius: 5px;
     color: white;  
     text-align: center;   
     font-size: 14px;    
